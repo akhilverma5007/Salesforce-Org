@@ -2,11 +2,13 @@ public class IntegerInReverseOrder {
     public static void integerReverseOrder(){
 	
     Integer num = 12345;
-    Integer reverse_Num;
+    String numString = String.valueOf(num);
+    String reversedStr = '';
         
-        for(Integer i = num; i >= num; i--){
-            System.debug(i);
-        }
+       for(Integer i = numString.length() - 1; i >= 0; i--){
+            reversedStr += numString.substring(i, i+1);
+       }
+        System.debug('Reversed Number: ' + reversedStr);
         
     }
 }
